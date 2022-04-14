@@ -12,4 +12,13 @@ class MainPage(BasePage):
     def should_be_login_link(self):
         assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "Login link is not presented"
         
+    def should_be_button_all_products(self):
+        assert self.is_element_present(*MainPageLocators.ALL_PRODUCTS_BUTTON), "All products button is not presented"
+        
+    def go_to_all_products(self):
+        self.browser.find_element(*MainPageLocators.ALL_PRODUCTS_BUTTON).click()
+        
+    def open_product_page(self):
+        self.browser.find_element(*MainPageLocators.FIRST_BOOK_ELEMENT).click()
+        
     
